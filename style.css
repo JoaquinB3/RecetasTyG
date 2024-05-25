@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    background: rgb(51,51,51);
+    background: linear-gradient(90deg, rgba(51,51,51,1) 5%, rgba(144,144,144,1) 100%);
+    display: flex;
+    .containerLogo{
+        width: 150px;
+        padding: 0px 30px;
+    }
+    .containerTitle{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+
+.menuPrincipal{
+    width: 100%;
+    display: flex;
+}
+
+
+
+aside{
+    height: calc(100vh - 130px);
+    background-color: rgb(253, 152, 37);
+    width: 15%;
+}
+
+.containerMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    padding: 0;
+    li {
+        padding: 10px 0px;
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+    li a {
+        text-decoration: none;
+        color: black;
+        position: relative; 
+    }
+    li a::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        transition: width 0.9s ease; /* Agregamos transición para suavizar el efecto */
+    }
+    li a:hover::before {
+        width: 100%;
+    }
+    li:hover {
+        background-color: rgb(173, 104, 25);
+        cursor: pointer;
+    }
+}
+
+main{
+    background-color:rgb(238, 238, 238);
+    padding: 25px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .containerFrase{
+        padding: 10px 45px;
+        background-color: rgb(253, 152, 37);
+        clip-path: polygon(93% 0, 100% 50%, 93% 100%, 0% 100%, 5% 50%, 0% 0%);        /* border-radius: 2em; */
+        font-size: 20px;
+        font-family:'Times New Roman', Times, serif;
+    }
+    .descripcionCatedra{
+        margin-top: 100px;
+    }
+}
+footer{
+    height: 50px;
+    background: rgb(51,51,51);
+    background: linear-gradient(90deg, rgba(51,51,51,1) 5%, rgba(144,144,144,1) 100%);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    h3{
+        margin: 0;
+        padding-right: 20px;
+    }
+}
+
+
+/*API 1*/
+
+#buttonAleatorio{
+    background-color: rgb(253, 152, 37);
+    border: solid 1px black;
+    border-radius: 0.7em;
+    margin-bottom: 25px;
+    padding: 15px;
+    box-shadow: 4px 5px 32px 8px rgba(0,0,0,0.47);
+-webkit-box-shadow: 4px 5px 32px 8px rgba(0,0,0,0.47);
+-moz-box-shadow: 4px 5px 32px 8px rgba(0,0,0,0.47);
+    &:hover{
+        background-color: rgb(209, 126, 32);
+    }
+}
+
+#containerRecetas{
+    width: 350px;
+    height: 400px;
+    border-radius: 0.3em;
+    background: rgb(51,51,51);
+    background: linear-gradient(90deg, rgba(51,51,51,1) 5%, rgba(144,144,144,1) 100%);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    h3{
+        color: white;
+    }
+    img{
+        width: 250px;
+        height: 250px
+    };
+}
