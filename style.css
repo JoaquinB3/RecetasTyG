@@ -6,7 +6,6 @@ body{
 header{
     height: 80px;
     width: 100%;
-    background: rgb(51,51,51);
     background: linear-gradient(90deg, rgba(51,51,51,1) 5%, rgba(144,144,144,1) 100%);
     display: flex;
     .containerLogo{
@@ -85,7 +84,7 @@ aside{
 }
 
 main{
-    background-color:rgb(238, 238, 238);
+    background-image: url('https://media.istockphoto.com/id/1198380802/es/vector/fondo-de-comida-verduras-patr%C3%B3n-sin-costura-alimentaci%C3%B3n-saludable-tomate-ajo-zanahoria.jpg?s=1024x1024&w=is&k=20&c=vPet99Kn5CkOw4oo6evbHrxFL3jhGPjGikO8u9kLPPk=');
     padding: 25px;
     width: 85%;
     display: flex;
@@ -100,6 +99,10 @@ main{
     }
     .descripcionCatedra{
         margin-top: 100px;
+        background-color: rgba(0, 0, 0, 0.753);
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 10px;
     }
 }
 footer{
@@ -119,10 +122,10 @@ footer{
 /*API 1*/
 
 #buttonAleatorio{
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.719);
     border: 2px solid #1A1A1A;
     border-radius: 15px;
-    color: #3B3B3B;
+    color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -130,7 +133,7 @@ footer{
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 25px;
-    padding: 16px 24px;
+    padding: 8px;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
     width: 350px;
     &:hover {
@@ -202,3 +205,52 @@ footer{
         }
     }
 }
+
+h3{
+    margin-top: 0;
+    font-size: 30px;
+}
+.containerLink2{
+    background-color: rgba(0, 0, 0, 0.459);
+    width: 900px;
+    height: 400px;
+    border-radius: 10px 0px 0px 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto; 
+    text-align: center;
+    --sb-track-color: rgb(88, 88, 88);
+    --sb-thumb-color:  rgb(253, 152, 37);
+    --sb-size: 6px;
+}
+
+.containerLink2::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+.containerLink2::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+}
+.containerLink2::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+}
+@supports not selector(::-webkit-scrollbar) {
+    .containerLink2{
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+}
+
+#containerGalleryImg{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.food-img{
+    object-fit: cover;
+    width: 200px;
+    height: 350px;
+    box-shadow: rgba(0, 0, 0, 0.945) 0 3px 9px;
+}
+

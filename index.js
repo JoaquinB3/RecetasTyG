@@ -37,6 +37,8 @@ const link1 = (e) => {
         document.getElementById("buttonAleatorio").addEventListener("click", getReceta);
 }
 
+//API 1 - Recetas 
+
 const getReceta = async ()=>{
     try {
         
@@ -69,11 +71,47 @@ const getReceta = async ()=>{
     } catch (error) {
         console.log('Error al obtener la receta', error);
     }
-
-
 }
 
+//API 2 - Galeria de comdias
 
+const apiKey = 'p8e25bvv6L32w2Z3GLl7yNKwgdqyFUvFRwU9wXc3KsNRU1aloo0PJNai'
+
+const link2 = async (e)=>{
+
+    e.preventDefault();
+    document.getElementById("main").innerHTML = `
+        <h3>Inspírate y transforma ingredientes en obras maestras.</h3>
+        <div class="containerLink2">
+            <div id="containerGalleryImg"></div>
+        </div>
+        `;
+
+    try {
+        const res = await fetch(`https://api.pexels.com/v1/search?query=food&per_page=10`,{
+
+        headers: {
+            'Authorization': apiKey
+            }
+        });
+        const data = await res.json();
+        const images = data.photos;
+
+        const galleryContainer = document.getElementById("containerGalleryImg");
+        images.forEach(image => {
+                const imgElement = document.createElement("img");
+                imgElement.src = image.src.medium;
+                imgElement.alt = image.alt;                    imgElement.className = "food-img";
+                galleryContainer.appendChild(imgElement);
+        });
+        
+    } catch (error) {
+        console.log('Error al obtener imagenes', error)
+    }
+
+    document.getElementById("link2").addEventListener("click", link2);
+
+} 
 
 
 
