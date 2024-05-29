@@ -115,6 +115,7 @@ footer{
     h3{
         margin: 0;
         padding-right: 20px;
+        font-size: 30px;
     }
 }
 
@@ -206,9 +207,12 @@ footer{
     }
 }
 
-h3{
+.containerTitleLink2{
     margin-top: 0;
     font-size: 30px;
+    background-color:  rgb(253, 152, 37);
+    padding: 10px;
+    border-radius: 10px;
 }
 .containerLink2{
     background-color: rgba(0, 0, 0, 0.459);

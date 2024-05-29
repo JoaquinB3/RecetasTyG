@@ -81,7 +81,7 @@ const link2 = async (e)=>{
 
     e.preventDefault();
     document.getElementById("main").innerHTML = `
-        <h3>Inspírate y transforma ingredientes en obras maestras.</h3>
+        <h3 class="containerTitleLink2">Inspírate y transforma ingredientes en obras maestras.</h3>
         <div class="containerLink2">
             <div id="containerGalleryImg"></div>
         </div>
